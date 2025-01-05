@@ -1,0 +1,322 @@
+:root {
+    --deep-blue: #2C3E50;
+    --emerald-green: #16A085;
+    --ochre-yellow: #F39C12;
+    --terracotta-red: #E74C3C;
+    --soft-white: #ECF0F1;
+    --light-gray: #BDC3C7;
+}
+
+/* Admin Panel Styles */
+body {
+    background-color: var(--soft-white);
+    color: var(--deep-blue);
+    min-height: 100vh;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.dashboard-card .card-body {
+    padding: 1.5rem;
+}
+
+/* Icon Containers */
+.dashboard-card .bg-opacity-10 {
+    border-radius: 8px;
+}
+
+/* Card Links */
+.dashboard-card a {
+    text-decoration: none;
+    color: var(--deep-blue);
+}
+
+.dashboard-card .btn-light {
+    background-color: var(--soft-white);
+    border-color: var(--light-gray);
+}
+
+.dashboard-card .btn-light:hover {
+    background-color: var(--light-gray);
+    border-color: var(--light-gray);
+}
+
+/* Tables */
+.table-responsive {
+    border-radius: 8px;
+    background-color: white;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    font-weight: 600;
+    background-color: var(--soft-white);
+    border-bottom-width: 1px;
+    color: var(--deep-blue);
+}
+
+.table td {
+    vertical-align: middle;
+    color: var(--deep-blue);
+}
+
+/* Tabs */
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    padding: 0.75rem 1rem;
+    color: var(--deep-blue);
+}
+
+.nav-tabs .nav-link:hover {
+    border: none;
+    color: var(--emerald-green);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--emerald-green);
+    background-color: transparent;
+    border-bottom: 2px solid var(--emerald-green);
+}
+
+/* Forms */
+.form-control, .form-select {
+    border-radius: 8px;
+    border-color: var(--light-gray);
+    padding: 0.5rem 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--emerald-green);
+    box-shadow: 0 0 0 0.25rem rgba(22, 160, 133, 0.25);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+    background-color: var(--emerald-green);
+    border-color: var(--emerald-green);
+}
+
+.btn-primary:hover {
+    background-color: #138a72;
+    border-color: #138a72;
+}
+.btn-outline-primary {
+    color: var(--emerald-green);
+    border-color: var(--emerald-green);
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: #138a72;
+    border-color: var(--emerald-green);
+}
+.btn-danger {
+    background-color: var(--terracotta-red);
+    border-color: var(--terracotta-red);
+}
+
+.btn-warning {
+    background-color: var(--ochre-yellow);
+    border-color: var(--ochre-yellow);
+}
+
+.btn-group-sm > .btn {
+    border-radius: 6px;
+}
+
+/* List Groups */
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    padding: 1rem 1.25rem;
+    color: var(--deep-blue);
+}
+
+.list-group-item:first-child {
+    border-top: none;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Modals */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom-color: var(--light-gray);
+    background-color: var(--soft-white);
+    border-radius: 12px 12px 0 0;
+}
+
+.modal-footer {
+    border-top-color: var(--light-gray);
+    background-color: var(--soft-white);
+    border-radius: 0 0 12px 12px;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+}
+
+.breadcrumb-item.active {
+    color: var(--emerald-green);
+}
+
+/* Messages */
+.message-card {
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.message-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Utilities */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Stats Cards */
+.stats-card {
+    background: linear-gradient(135deg, var(--emerald-green), #1abc9c);
+    color: white;
+}
+
+.stats-card.destinations {
+    background: linear-gradient(135deg, var(--deep-blue), #34495e);
+}
+
+.stats-card.messages {
+    background: linear-gradient(135deg, var(--ochre-yellow), #f1c40f);
+}
+
+.stats-card.featured {
+    background: linear-gradient(135deg, var(--terracotta-red), #c0392b);
+}
+
+/* Admin Header & Footer */
+.admin-header {
+    background-color: var(--deep-blue);
+    color: var(--soft-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.admin-header .navbar-brand,
+.admin-header .nav-link {
+    color: var(--soft-white);
+}
+
+.admin-header .nav-link:hover {
+    color: var(--emerald-green);
+}
+
+.admin-header .nav-link.active {
+    color: var(--emerald-green);
+}
+
+.admin-header .dropdown-menu {
+    background-color: var(--deep-blue);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin-header .dropdown-item {
+    color: var(--soft-white);
+}
+
+.admin-header .dropdown-item:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: var(--emerald-green);
+}
+
+.admin-footer {
+    background-color: var(--deep-blue);
+    color: var(--soft-white);
+    padding: 1rem 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.admin-footer a {
+    color: var(--emerald-green);
+    text-decoration: none;
+}
+
+.admin-footer a:hover {
+    color: var(--soft-white);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dashboard-card {
+        margin-bottom: 1rem;
+    }
+    
+    .nav-tabs .nav-link {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* Custom Switch */
+.form-switch .form-check-input {
+    width: 2.5em;
+    height: 1.25em;
+    cursor: pointer;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: var(--emerald-green);
+    border-color: var(--emerald-green);
+}
+
+/* Animations */
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}

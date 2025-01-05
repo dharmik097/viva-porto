@@ -1,0 +1,178 @@
+:root {
+    --deep-blue: #2C3E50;
+    --emerald-green: #16A085;
+    --ochre-yellow: #F39C12;
+    --terracotta-red: #E74C3C;
+    --soft-white: #ECF0F1;
+    --light-gray: #BDC3C7;
+}
+
+body {
+    background-color: var(--soft-white);
+    color: var(--deep-blue);
+    padding-top: 56px;
+}
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+    margin-top: -56px;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 400px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.carousel-caption {
+    background: rgba(44, 62, 80, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Featured Destinations */
+.destination-card {
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn-outline-primary {
+    color: var(--emerald-green);
+    border-color: var(--emerald-green);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: #138a72;
+    border-color: var(--emerald-green);
+}
+
+.btn-primary {
+    background-color: var(--emerald-green);
+    border-color: var(--emerald-green);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--terracotta-red);
+    border-color: var(--terracotta-red);
+}
+
+a.btn-primary {
+    color: #fff;
+}
+
+/* General Links */
+a {
+    color: var(--emerald-green);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--deep-blue);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--ochre-yellow);
+}
+
+/* Social Links */
+.social-links a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+/* Map Section */
+#map {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+/* Carousel Adjustments */
+.carousel-inner {
+    position: relative;
+}
+
+.carousel-caption {
+    color: white;
+    z-index: 2;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 20%;
+}
+
+/* Search Input */
+.input-search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    z-index: 10;
+}
+
+.input-search input {
+    padding: 15px;
+    border-radius: 30px;
+}
+
+/* Full Page Height Adjustment */
+.fit-on-page {
+    height: calc(100vh - 56px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .custom-navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .carousel-item {
+        height: 300px;
+        min-height: 300px;
+        max-height: 300px;
+    }
+
+    #map {
+        height: 300px;
+    }
+
+    footer {
+        margin-top: 40px;
+    }
+
+    .fit-on-page-categories {
+        height: auto;
+    }
+}

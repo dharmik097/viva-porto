@@ -1,0 +1,18 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+# Allow access to all PHP files
+<Files *.php>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Basic routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Error documents
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
