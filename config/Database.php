@@ -2,8 +2,8 @@
 class Database {
     private $host = "127.0.0.1";
     private $db_name = "vivaporto";
-    private $username = "vivaporto";
-    private $password = "root";
+    private $username = "root";
+    private $password = "";
     private $conn;
 
     public function getConnection() {

@@ -1,19 +1,16 @@
 <?php
 session_start();
 require_once __DIR__ . '/UrlHelper.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viva Porto - Discover Porto's Beauty</title>
+    <title>Viva Porto - About Us</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
@@ -44,23 +41,46 @@ require_once __DIR__ . '/UrlHelper.php';
                         <a class="nav-link <?php echo UrlHelper::isCurrentUrl('contact') ? 'active' : ''; ?>" 
                            href="<?php echo UrlHelper::getUrl('contact'); ?>">Contact</a>
                     </li>
-                    <!-- Added About Us page link -->
                     <li class="nav-item">
-                        <a class="nav-link <?php echo UrlHelper::isCurrentUrl('aboutus') ? 'active' : ''; ?>" 
-                           href="<?php echo UrlHelper::getUrl('aboutus'); ?>">About Us</a>
+                        <a class="nav-link <?php echo UrlHelper::isCurrentUrl('about') ? 'active' : ''; ?>" 
+                           href="<?php echo UrlHelper::getUrl('about'); ?>">About Us</a>
                     </li>
-                    <?php if(isset($_SESSION['is_admin'])): ?>
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo strpos(UrlHelper::getCurrentUrl(), '/admin') !== false ? 'active' : ''; ?>" 
-                               href="<?php echo UrlHelper::getAdminUrl(); ?>">Admin</a>
-                        </li>
-                    <?php else :  ?>
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo strpos(UrlHelper::getCurrentUrl(), '/admin') !== false ? 'active' : ''; ?>" 
-                               href="<?php echo UrlHelper::getAdminUrl(); ?>">Login</a>
-                        </li>
-                    <?php endif; ?>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>About Us</h1>
+                <p class="lead">Welcome to Viva Porto - Discover the beauty and culture of Porto!</p>
+                <p>Viva Porto is dedicated to showcasing the rich history, vibrant culture, and stunning landscapes of Porto, Portugal. Our mission is to help you explore and experience the best that Porto has to offer.</p>
+
+                <h3>Our Mission</h3>
+                <p>Our mission is to create memorable experiences for visitors by highlighting the unique charm of Porto. From historical landmarks to hidden gems, we aim to make your journey unforgettable.</p>
+
+                <h3>Our Team</h3>
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-2" alt="Team Member 1">
+                        <p>John Doe - Founder</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-2" alt="Team Member 2">
+                        <p>Jane Smith - Marketing Head</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-2" alt="Team Member 3">
+                        <p>Mark Johnson - Tour Guide</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-2" alt="Team Member 4">
+                        <p>Emily Davis - Customer Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
